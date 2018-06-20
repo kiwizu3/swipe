@@ -38,7 +38,7 @@ body {
 
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
   background-color: #fff;
-  background: center/cover url("../imgs/male.jpg");
+  background: center/cover url("./imgs/male.jpg");
 
   cursor: pointer;
   opacity: 1;
@@ -127,7 +127,7 @@ body {
   width: var(--width);
   height: var(--height);
   background-color: #fff;
-  background: center/cover url("../imgs/female.jpg");
+  background: center/cover url("./imgs/female.jpg");
 }
 
 .eased-return {
