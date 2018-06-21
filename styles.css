@@ -95,12 +95,16 @@ body {
   line-height: 90%;
 }
 
+.message.like {
+    transform: translate(-60px, -120px) rotate(-10deg);
+}
+
 .message.like::before {
   content: "LIKE";
-  color: #77c093;
-  border-color: #77c093;
-
-  transform: translate(-60px, -120px) rotate(-10deg);
+  background: linear-gradient(to right, #36f0c5, #8faeff);
+  border-color: #36f0c5;
+  background-clip: text;
+  color: transparent;
 }
 
 .message.nope::before {
@@ -131,7 +135,7 @@ body {
 }
 
 .eased-return {
-  transition: transform 0.3s ease-out;
+  transition: transform 0.15s linear;
 }
 
 .faded {
@@ -217,12 +221,42 @@ body {
 }
 
 .about {
-  border-top: 1px dotted #aaa;
   display: grid;
   grid-template-areas:
     "about-title about-title credit-title"
     "about about credit"
     "about about credit";
+
+  background-color: #333;
+  color: #fff;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5) inset;
+
+  grid-column-gap: 2rem;
+  column-gap: 2rem;
+
+  grid-row-gap: 0.25rem;
+  row-gap: 0.25rem;
+
+  padding: 0.5rem 2rem;
+
+  font-size: 0.85rem;
+}
+
+.about h4,
+.about p {
+  padding: 0;
+  margin: 0;
+}
+
+.about a,
+.about a:visited {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.about a:hover {
+  text-decoration: underline;
 }
 
 .credit-title {
