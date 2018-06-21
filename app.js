@@ -24,8 +24,7 @@ swipee.addEventListener("mousedown", e => {
 });
 
 function updateSwipee(e) {
-  swipee.style = `transform: translate(${(e.clientX - start.x) *
-    1.25}px, ${e.clientY - start.y}px) rotate(${(e.clientX - start.x) *
+  swipee.style = `transform: translate(${e.clientX - start.x}px, ${e.clientY - start.y}px) rotate(${(e.clientX - start.x) *
     -0.1 *
     direction}deg);`;
   swipee.classList.add("eased-return");
