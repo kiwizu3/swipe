@@ -1,3 +1,4 @@
+const main = document.querySelector(".main");
 const swipee = document.querySelector(".swipee");
 const message = document.querySelector(".message");
 const modalWrapper = document.querySelector(".modal-wrapper");
@@ -24,9 +25,8 @@ swipee.addEventListener("mousedown", e => {
 });
 
 function updateSwipee(e) {
-  swipee.style = `transform: translate(${e.clientX - start.x}px, ${e.clientY - start.y}px) rotate(${(e.clientX - start.x) *
-    -0.1 *
-    direction}deg);`;
+  swipee.style = `transform: translate(${e.clientX - start.x}px, ${e.clientY -
+    start.y}px) rotate(${(e.clientX - start.x) * -0.1 * direction}deg);`;
   swipee.classList.add("eased-return");
 
   if (
@@ -86,6 +86,7 @@ swipee.addEventListener("swipe", e => {
     superLikeCount++;
     if (superLikeCount > 1) {
       modalWrapper.classList.remove("hidden");
+      main.classList.add("blur");
     }
   }
 
@@ -106,9 +107,11 @@ swipee.addEventListener("swipe", e => {
 modalWrapper.addEventListener("click", e => {
   if (e.target === modalWrapper) {
     modalWrapper.classList.add("hidden");
+    main.classList.remove("blur");
   }
 });
 
 closeBtn.addEventListener("click", e => {
   modalWrapper.classList.add("hidden");
+  main.classList.remove("blur");
 });
