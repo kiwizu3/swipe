@@ -49,7 +49,8 @@ body {
 
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
   background-color: #fff;
-  background: center/cover url("./imgs/male.jpg");
+  background: center/cover url("./imgs/male.jpg"),
+    linear-gradient(15deg, #333, #aaa 33%, #eee);
 
   cursor: pointer;
   opacity: 1;
@@ -155,7 +156,8 @@ body {
   width: 100%;
   height: 100%;
   background-color: #fff;
-  background: center/cover url("./imgs/female.jpg");
+  background: center/cover url("./imgs/female.jpg"),
+    linear-gradient(15deg, #333, #aaa 33%, #eee);
 }
 
 .eased-return {
