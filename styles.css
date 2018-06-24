@@ -89,40 +89,51 @@ body {
 
 .message::before {
   display: inline-block;
-  border: 6px solid;
-  border-radius: 6px;
+  border: 6px solid transparent;
+
   padding: 0 0.25rem;
   line-height: 90%;
 }
 
 .message.like {
-    transform: translate(-60px, -120px) rotate(-10deg);
+  transform: translate(-60px, -120px) rotate(-10deg);
 }
 
 .message.like::before {
   content: "LIKE";
   background: linear-gradient(to right, #36f0c5, #8faeff);
-  border-color: #36f0c5;
+  border-image: linear-gradient(to right, #36f0c5, #8faeff) 6 6 repeat;
   background-clip: text;
+
   color: transparent;
+}
+
+.message.nope {
+  transform: translate(60px, -120px) rotate(20deg);
 }
 
 .message.nope::before {
   content: "NOPE";
-  color: #f3674c;
-  border-color: #f3674c;
+  background: linear-gradient(to right, #da4f33, #f59589);
+  border-image: linear-gradient(to right, #da4f33, #f59589) 6 6 repeat;
+  background-clip: text;
 
-  transform: translate(60px, -120px) rotate(20deg);
+  color: transparent;
+}
+
+.message.super-like {
+  transform: translate(20px, 80px) rotate(10deg);
 }
 
 .message.super-like::before {
   content: "SUPER LIKE";
-  color: #8faeff;
-  border-color: #8faeff;
+  background: linear-gradient(to right, #8faeff, #4167c7);
+  border-image: linear-gradient(to right, #8faeff, #4167c7) 6 6 repeat;
+  background-clip: text;
   width: 250px;
   text-align: center;
 
-  transform: translate(20px, 80px) rotate(10deg);
+  color: transparent;
 }
 
 .mock-swipee {
