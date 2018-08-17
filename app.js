@@ -7,7 +7,7 @@ const start = { x: 0, y: 0 };
 let direction = 0;
 
 let superLikeCount = 0;
-const threshold = swipee.clientWidth / 2;
+let threshold;
 
 document
   .querySelectorAll("unselectable")
@@ -16,6 +16,7 @@ document
 swipee.addEventListener("mousedown", e => {
   start.x = e.clientX;
   start.y = e.clientY;
+  threshold = swipee.clientWidth / 2;
 
   direction = Math.sign(e.clientY - swipee.offsetTop - swipee.clientHeight / 2);
 
